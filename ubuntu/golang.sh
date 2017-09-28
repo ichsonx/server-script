@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+#用source命令执行本脚本
 #安装golang1.9，并且安装glide
 sudo wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.9.linux-amd64.tar.gz
