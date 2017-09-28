@@ -4,3 +4,4 @@
 echo "===removing vim...\n"
 sudo apt-get remove vim && echo "===install vim...\n" && sudo apt-get install -y vim && echo "===install git...\n" && sudo apt-get install git && echo "===install lrzsz...\n" && sudo apt-get install lrzsz
 sudo apt-get install -y curl
+git clone https://github.com/ichsonx/server-script.git
