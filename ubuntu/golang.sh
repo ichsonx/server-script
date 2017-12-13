@@ -8,5 +8,10 @@ sudo mkdir /root/goprojects && sudo mkdir /root/goprojects/bin && sudo mkdir /ro
 sudo echo "export GOROOT=/usr/local/go" >> /etc/profile
 sudo echo "export GOPATH=/root/goprojects" >> /etc/profile
 sudo echo "export PATH=\$PATH:\$GOROOT:\$GOROOT/bin:\$GOPATH:\$GOPATH/bin" >> /etc/profile
+sudo echo "export GOROOT=/usr/local/go" >> ~/.bashrc
+sudo echo "export GOPATH=/root/goprojects" >> ~/.bashrc
+sudo echo "export PATH=\$PATH:\$GOROOT:\$GOROOT/bin:\$GOPATH:\$GOPATH/bin" >> ~/.bashrc
+sudo echo "export GOROOT=/usr/local/go" >> ~/.profile
+sudo echo "export GOPATH=/root/goprojects" >> ~/.profile
+sudo echo "export PATH=\$PATH:\$GOROOT:\$GOROOT/bin:\$GOPATH:\$GOPATH/bin" >> ~/.profile
 source /etc/profile
-sudo curl https://glide.sh/get | sh
