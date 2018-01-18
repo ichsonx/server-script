@@ -2,6 +2,7 @@
 
 ###
 #   这里的shadowsocks配置文件中，需要自行修改server的ip地址、端口、密码等信息
+#   polipo的配置文件一样要自行修改某些信息
 ###
 
 #   polipo配置文件路径
