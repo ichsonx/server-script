@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 
-#ssfile="/etc/shaowsocks.json"
+###
+#   这里的shadowsocks配置文件中，需要自行修改server的ip地址、端口、密码等信息
+###
+
+#   polipo配置文件路径
 polipofile="/etc/polipo/config"
+#   shadowsocks配置文件路径
 ssfile="shaowsocks.json"
+#   自启动shadowsocks、polipo的脚本文件
 ss_polipofile="./ss_polipo_initd.sh"
+#   最终存放shadowsocks、polipo脚本文件的完整绝对路径及文件名
 initpath="/etc/init.d/ss_polipo"
 
 #   首先安装shadowsocks需要的东西（python 和 pip 就当作默认安装了）
