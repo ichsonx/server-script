@@ -3,6 +3,8 @@
 #ssfile="/etc/shaowsocks.json"
 polipofile="/etc/polipo/config"
 ssfile="shaowsocks.json"
+ss_polipofile="./ss_polipo_initd.sh"
+initpath="/etc/init.d/ss_polipo"
 
 #   首先安装shadowsocks需要的东西（python 和 pip 就当作默认安装了）
 sudo apt-get install python-m2crypto
@@ -46,7 +48,17 @@ serverSlots1 = 32
 EOF
 
 ##  为终端添加http代理配置到/etc/profile中
-sudo export http_proxy="http://127.0.0.1:8123/"
+cat >> /etc/profile <<EOF
+export http_proxy="http://127.0.0.1:8123/"
+EOF
+
+#   从本目录中拷贝ss_polipo_initd.sh到目标系统 /etc/init.d/下。目的是开机自启动shadowsocks和全局代理
+#   如果要删除这个自启动服务，可使用命令：sudo update-rc.d -f ss_polipo remove
+if [ -f "$ss_polipofile" ]; then
+    cp $ss_polipofile $initpath
+    chmod 755 $initpath
+    sudo update-rc.d ss_polipo defaults 95
+fi
 
 #   重启计算机
 #   polipo的启动命令     sudo /etc/init.d/polipo restart
