@@ -70,4 +70,5 @@ fi
 #   重启计算机
 #   polipo的启动命令     sudo /etc/init.d/polipo restart
 #   shadowsocks的启动命令    sudo sslocal -c shawdowsocks.json -d start
+
 reboot
