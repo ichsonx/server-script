@@ -4,6 +4,8 @@
 #   这样是使用kubeadm来安装完整的k8s的集群
 
 apt-get update && apt-get install -y apt-transport-https
+#   下面是下载k8s的ubuntu仓库key，虚拟机即使翻墙了也很有可能下载不了，作者就是这种情况
+#   可以windows上先哲在这个gpg，然后用apt-key来添加，然后后面的命令就可以全部顺利完成了
 #curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
