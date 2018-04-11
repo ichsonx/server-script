@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#   使用kubeadm安装master，设置好相应的pod网络地址。
+#   使用kubeadm安装master，设置好相应的pod网络地址。然后会拉去相应需要的镜像文件
 #   注意：这里使用前需要先disable swap，不然会报错，ubuntu的相关命令： sudo swapoff -a
 
 # --api-advertise-addresses <ip-address>
