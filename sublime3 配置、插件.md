@@ -14,3 +14,28 @@
 
 7. #### A File Icon：同上
 
+
+# 设置篇
+
+1. 开启vim模式，setting里面
+
+- 清空【】里的内容：
+
+  > "ignored_packages":
+  > 　[
+  > 　]
+
+2. 开启ctrl翻页等功能
+
+   > setting里加入以下代码：
+   >
+   > "vintage_ctrl_keys": true
+   >
+   > `这样就支持以下命令了：`　　
+   >
+   > - Ctrl+[ : Esc键的别名
+   > - Ctrl+R : Redo
+   > - Ctrl+Y : 向下滚动一行
+   > - Ctrl+E : 向上滚动一行
+   > - Ctrl+F : 下一页
+   > - Ctrl+B : 上一页
