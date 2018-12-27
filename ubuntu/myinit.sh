@@ -16,9 +16,11 @@ sudo apt-get install -y lrzsz && \
 #   git配置相关
 ###
 sudo git config --global user.email "sonxz@qq.com" && \
-sudo git config --global user.name "sonx"
+sudo git config --global user.name "sonx" && \
+sudo git config --global core.editor vim && \
+sudo git config --global merge.tool vimdiff && \
 # git log 历史树别名和样式设定
-git config --global alias.lg "log --pretty=format:'%C(yellow)%h%Creset %C(cyan)%d %C(white)%s %C(bold blue)<%an>%Creset %C(dim)%ad' --graph --date=format:'%Y-%m-%d %H:%M:%S'"
+git config --global alias.lg "log --pretty=format:'%C(yellow)%h%Creset %C(cyan)%d %C(white)%s %C(bold blue)<%an>%Creset %C(dim)%ad' --graph --all --date=format:'%Y-%m-%d %H:%M:%S'"  && \
 
 ###
 #   ubuntu16以后都默认安装python3.6.5，这里开始安装python的其他库
