@@ -11,6 +11,7 @@ sudo apt-get install git && \
 sudo apt-get install -y curl && \
 sudo apt-get install -y wget && \
 sudo apt-get install -y lrzsz && \
+sudo apt-get install -y unzip && \
 
 ###
 #   git配置相关
