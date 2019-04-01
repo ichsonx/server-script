@@ -68,5 +68,6 @@ sudo mkdir /root/goprojects && sudo mkdir /root/goprojects/bin && sudo mkdir /ro
 sudo echo "export GOROOT=/usr/local/go" >> /etc/profile
 sudo echo "export GOPATH=/root/goprojects" >> /etc/profile
 sudo echo "export GO111MODULE=on" >> /etc/profile
+sudo echo "export GOPROXY=https://gocenter.io"
 sudo echo "export PATH=\$PATH:\$GOROOT:\$GOROOT/bin:\$GOPATH:\$GOPATH/bin:\$GO111MODULE" >> /etc/profile
 source /etc/profile
