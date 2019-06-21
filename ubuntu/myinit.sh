@@ -62,8 +62,8 @@ sudo apt-get install npm
 ###
 #   安装golang及相关
 ###
-sudo wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.12.5.linux-amd64.tar.gz
+sudo wget https://dl.google.com/go/go1.12.6.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.12.6.linux-amd64.tar.gz
 sudo mkdir /root/goprojects && sudo mkdir /root/goprojects/bin && sudo mkdir /root/goprojects/pkg && sudo mkdir /root/goprojects/src
 sudo echo "export GOROOT=/usr/local/go" >> /etc/profile
 sudo echo "export GOPATH=/root/goprojects" >> /etc/profile
