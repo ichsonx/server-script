@@ -49,6 +49,13 @@ source /etc/profile
 sudo apt-get install nodejs && \
 sudo apt-get install npm
 
+###
+#   安装zsh以及相关插件
+###
+sudo apt-get -y install zsh &&\
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
 #安装mongodb及相关
 #添加mongodb签名到APT
 #创建/etc/apt/sources.list.d/mongodb-org-3.4.list文件并写入命令
@@ -63,8 +70,8 @@ sudo apt-get install npm
 ###
 #   安装golang及相关
 ###
-sudo wget https://dl.google.com/go/go1.12.6.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.12.6.linux-amd64.tar.gz
+sudo wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.13.linux-amd64.tar.gz
 sudo mkdir /root/goprojects && sudo mkdir /root/goprojects/bin && sudo mkdir /root/goprojects/pkg && sudo mkdir /root/goprojects/src
 sudo echo "export GOROOT=/usr/local/go" >> /etc/profile
 sudo echo "export GOPATH=/root/goprojects" >> /etc/profile
