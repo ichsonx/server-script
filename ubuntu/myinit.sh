@@ -27,6 +27,7 @@ git config --global alias.lg "log --pretty=format:'%C(yellow)%h%Creset %C(cyan)%
 #   ubuntu16以后都默认安装python3.6.5，这里开始安装python的其他库
 ###
 sudo apt-get install -y python3-pip && \
+pip install --upgrade setuptools && \
 sudo pip3 install selenium && \
 sudo pip3 install scrapy && \
 sudo pip3 install pymongo && \
