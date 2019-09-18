@@ -65,7 +65,13 @@ apt --fix-broken install
 sudo dpkg -i google-chrome*.deb # Might show "errors", fixed by next line
 ########### 可选部分 结束
 # 确认安装刚刚的chrome deb文件
+# 可能会提示删除之前已经不再需要的包，并给出命令，依照提示执行 sudo apt autoremove 命令后，再执行安装命令即可。
 sudo apt-get install -f
+# 测试安装，本地启动chrome headless，再用curl测试。root用户启动需要添加 --no-sandbox 参数
+# google-chrome --version 可查看当前安装的chrome版本号
+google-chrome --headless --no-sandbox --remote-debugging-port=9222 https://chromium.org --disable-gpu
+curl http://localhost:9222
+
 
 
 ###
