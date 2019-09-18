@@ -50,6 +50,25 @@ sudo apt-get install nodejs && \
 sudo apt-get install npm
 
 ###
+#   使用chrome headless，包括安装chrome、下载配置chrome driver、安装chromedp
+#   前置依赖 git、wget
+###
+sudo apt-get install libxss1 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb # Might show "errors", fixed by next line
+########### 可选部分 开始
+# 上一行是检查当前stable版本的chrome，在18.04报错缺少依赖，使用这一行安装依赖后会报错修复依赖
+sudo apt-get install -y fonts-liberation
+# 使用这一行来修复依赖安装
+apt --fix-broken install
+# 再安装一次chrome，无报错顺利安装完成
+sudo dpkg -i google-chrome*.deb # Might show "errors", fixed by next line
+########### 可选部分 结束
+# 确认安装刚刚的chrome deb文件
+sudo apt-get install -f
+
+
+###
 #   安装zsh以及相关插件
 ###
 sudo apt-get -y install zsh &&\
