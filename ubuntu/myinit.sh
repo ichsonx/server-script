@@ -71,6 +71,11 @@ sudo apt-get install -f
 # google-chrome --version 可查看当前安装的chrome版本号
 google-chrome --headless --no-sandbox --remote-debugging-port=9222 https://chromium.org --disable-gpu
 curl http://localhost:9222
+# 下载对应的chrome driver，并设置好环境变量
+# https://sites.google.com/a/chromium.org/chromedriver/downloads
+unzip chromedriver_linux64.zip
+sudo vi /etc/profile
+# 添加到文件末尾 export PATH=$PATH:/root/chromedriver
 
 
 
