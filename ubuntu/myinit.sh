@@ -7,7 +7,7 @@ sudo apt-get update && \
 sudo apt-get upgrade && \
 sudo apt-get remove vim && \
 sudo apt-get install -y vim && \
-sudo apt-get install git && \
+sudo apt-get install -y git && \
 sudo apt-get install -y curl && \
 sudo apt-get install -y wget && \
 sudo apt-get install -y lrzsz && \
@@ -46,14 +46,14 @@ source /etc/profile
 ###
 #   安装nodejs以及相关
 ###
-sudo apt-get install nodejs && \
-sudo apt-get install npm
+sudo apt-get install -y nodejs && \
+sudo apt-get install -y npm
 
 ###
 #   使用chrome headless，包括安装chrome、下载配置chrome driver、安装chromedp
 #   前置依赖 git、wget
 ###
-sudo apt-get install libxss1 libappindicator1 libindicator7
+sudo apt-get install -y libxss1 libappindicator1 libindicator7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb # Might show "errors", fixed by next line
 ########### 可选部分 开始
