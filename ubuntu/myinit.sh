@@ -1,6 +1,14 @@
 #!/bin/bash
 
 ###
+#   Vultr在线修改ssh端口，使用其在线console，执行以下操作
+# 1. vim /etc/ssh/sshd_config
+# 2. 然后找到SSH端口“Port”对应的那个数值，修改成你想要的那个值，保存
+# 3. 执行/etc/init.d/ssh restart
+# 4. 如果提示命令不存在，可以执行reboot命令重启服务器
+###
+
+###
 #   最初的初始化及安装必要软件
 ###
 sudo apt-get update && \
